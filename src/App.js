@@ -1,13 +1,17 @@
 import React,{useState,useEffect} from "react";
+import CardList from "./CardList";
+
 const QUERY = `
 {
-  launchesPast {
-		id
+  launchesPast(limit: 5) {
+    id
     mission_name
     launch_date_local
     ships {
       name
+      image
     }
+    details
   }
 }
 `
@@ -29,7 +33,12 @@ function App() {
     <div>
       {
         launches.map(l=>(
-          <li>{l.id +": "+ l.mission_name}</li>
+          //<li>{l.id +": "+ l.mission_name}</li>
+          <CardList
+            key={l.id}
+            title={l.mission_name}
+            detail={l.details}
+          />
         ))
       }
 
