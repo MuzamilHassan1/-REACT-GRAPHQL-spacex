@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from "react";
 import CardList from "./CardList";
+import Pagination from "./Pagination";
 
 const QUERY = `
 {
-  launchesPast(limit: 5) {
+  launchesPast {
     id
     mission_name
     launch_date_local
@@ -30,18 +31,25 @@ function App() {
   },[]);
 
   return (
-    <div>
-      {
-        launches.map(l=>(
-          //<li>{l.id +": "+ l.mission_name}</li>
-          <CardList
-            key={l.id}
-            title={l.mission_name}
-            detail={l.details}
-          />
-        ))
-      }
+    // <div>
+    //   {
+    //     launches.map(l=>(
+    //       <CardList
+    //         key={l.id}
+    //         title={l.mission_name}
+    //         detail={l.details}
+    //         id={l.id}
+    //       />
+    //     ))
+    //   }
 
+    // </div>
+    <div>
+      <Pagination
+        data={launches}
+        RenderComponent={CardList}
+        dataLimit={5}
+      />
     </div>
   );
 }
