@@ -3,15 +3,14 @@ import CardList from './CardList';
 
 const Pagination = ({ data, dataLimit }) => {
   const [pages] = useState(Math.round(data.length / dataLimit));
-  console.log(pages);
   const [currentPage, setCurrentPage] = useState(1);
 
-  function goToNextPage() {
-    setCurrentPage((page) => page + 1);
+  const goToNextPage = () => {
+    setCurrentPage(currentPage + 1);
   }
 
-  function goToPreviousPage() {
-    setCurrentPage((page) => page - 1);
+  const goToPreviousPage = () => {
+    setCurrentPage(currentPage - 1);
   }
 
   const getPaginatedData = () => {
@@ -30,10 +29,10 @@ const Pagination = ({ data, dataLimit }) => {
             title={l.mission_name}
             detail={l.details}
             id={l.id}
+            date={l.launch_date_local}
           />
         ))}
       </div>
-
 
       <div className="pagination">
         <button

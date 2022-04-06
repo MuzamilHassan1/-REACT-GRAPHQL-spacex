@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react";
-import CardList from "./CardList";
 import Pagination from "./Pagination";
 
 const QUERY = `
@@ -16,9 +15,7 @@ const QUERY = `
   }
 }
 `
-
-function App() {
-
+const useLaunches = () => {
   const [launches,setLaunches] = useState([]);
 
   useEffect(()=>{
@@ -30,26 +27,19 @@ function App() {
     .then(data => setLaunches(data.data.launchesPast))
   },[]);
 
-  return (
-    // <div>
-    //   {
-    //     launches.map(l=>(
-    //       <CardList
-    //         key={l.id}
-    //         title={l.mission_name}
-    //         detail={l.details}
-    //         id={l.id}
-    //       />
-    //     ))
-    //   }
+  return launches;
+}
 
-    // </div>
+
+const App = () => {
+  const launches=useLaunches();
+
+  return (
     <div>
-      <Pagination
-        data={launches}
-        RenderComponent={CardList}
-        dataLimit={5}
-      />
+      {launches.length > 0 ?
+        <Pagination data={launches} dataLimit={5} />
+        : <h1>Loading Data Please Wait.....</h1>
+      }
     </div>
   );
 }
