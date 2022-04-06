@@ -1,4 +1,5 @@
 import { Navbar, Container, Nav, Button, Form, FormControl } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -14,7 +15,9 @@ const Navigation = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1"  className="text-white">Home</Nav.Link>
+          <Link to="/" className="text-white custom">Home Page</Link>
+          <Link to="/missions" className="text-white custom">Missions Listing</Link>
+
           </Nav>
 
           <Form className="d-flex">

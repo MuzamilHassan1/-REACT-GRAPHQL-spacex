@@ -33,6 +33,10 @@ body{
   z-index: 1000;
 }
 
-.toggle{
-  color: white;
+.custom{
+  text-decoration: none;
+}
+
+.custom:hover{
+  text-decoration: underline;
 }
