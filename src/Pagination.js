@@ -38,7 +38,7 @@ const Pagination = ({ data, dataLimit }) => {
         ))}
       </div>
 
-      <div className="pagination">
+      <div className="pagination mb-4">
         <button
           onClick={goToPreviousPage}
           className={`prev ${currentPage === 1 ? 'disabled' : ''}`}

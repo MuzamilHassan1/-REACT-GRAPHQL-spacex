@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import Pagination from "./Pagination";
+import Navigation from "./Navigation";
 
 const QUERY = `
 {
@@ -36,6 +37,7 @@ const App = () => {
 
   return (
     <div>
+      <Navigation />
       {launches.length > 0 ?
         <Pagination data={launches} dataLimit={5} />
         : <h1>Loading Data Please Wait.....</h1>

@@ -1,3 +1,7 @@
+body{
+  background-color: #999;
+}
+
 .pagination {
   display: flex;
   align-items: center;
@@ -21,4 +25,14 @@
   pointer-events: none;
   box-shadow: none;
   color: #999;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.toggle{
+  color: white;
 }
