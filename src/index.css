@@ -2,7 +2,7 @@ body{
   background-color: #999;
 }
 
-.pagination {
+.center-button {
   display: flex;
   align-items: center;
   justify-content: center;

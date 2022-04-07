@@ -27,13 +27,10 @@ const Pagination = ({ data, dataLimit }) => {
   return (
     <div>
       <div>
-        {getPaginatedData().map(l => (
+        {getPaginatedData().map(launch => (
           <CardList
-            key={l.id}
-            title={l.mission_name}
-            detail={l.details}
-            id={l.id}
-            date={l.launch_date_local}
+            key={launch.id}
+            launch={launch}
           />
         ))}
       </div>
