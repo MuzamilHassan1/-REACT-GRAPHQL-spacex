@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Row, Col, Button } from "react-bootstrap";
 import { useLocation, Link } from "react-router-dom";
+import Ships from "./Ships";
 
 const Show = () => {
   const location = useLocation()
@@ -21,6 +22,10 @@ const Show = () => {
             </Card>
           </Col>
         </Row>
+
+        <div>
+          {ships.length > 0 ? ships.map(s => (<Ships/>)) : <h1>No Ships Data Found for This Mission</h1>}
+        </div>
 
         <div className="center-button">
           <Link to="/missions">
