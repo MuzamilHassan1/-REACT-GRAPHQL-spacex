@@ -24,7 +24,7 @@ const Show = () => {
         </Row>
 
         <div>
-          {ships.length > 0 ? ships.map(s => (<Ships data={s}/>)) : <h3 className="text-center">No Ships Data Found for This Mission</h3>}
+          {ships.length > 0 ? ships.map(s => (<Ships key={s.name} data={s}/>)) : <h3 className="text-center">No Ships Data Found for This Mission</h3>}
         </div>
 
         <div className="center-button">

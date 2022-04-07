@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    //fixed-top bg-dark
     <Navbar expand="lg" className="mb-4 navbar-dark sticky-nav bg-dark">
       <Container fluid>
         <Navbar.Brand href="#" className="text-white">SPACEX APP</Navbar.Brand>

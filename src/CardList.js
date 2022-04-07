@@ -3,9 +3,6 @@ import { Card,Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const CardList = ({launch}) => {
-  // const onClickHandler = () => {
-  //   <Link to="/" className="text-white custom">Home Page</Link>
-  // }
   return(
     <Row xs={1} md={2} className="g-4 mb-4 justify-content-center">
       <Col>

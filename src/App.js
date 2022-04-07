@@ -3,6 +3,8 @@ import Pagination from "./Pagination";
 import Navigation from "./Navigation";
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 import Show from "./Show";
+import Home from "./Home"
+
 
 const QUERY = `
 {
@@ -41,16 +43,14 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Routes>
+        <Route path="/" element={<Home/>}></Route>
         <Route path="/missions" element={
           launches.length > 0 ?
           <Pagination data={launches} dataLimit={5}/> :
           <h1>Loading Data Please Wait.....</h1>
         }>
         </Route>
-
-        <Route path="/mission/:id" element={<Show/>}>
-        </Route>
-
+        <Route path="/mission/:id" element={<Show/>}></Route>
       </Routes>
     </BrowserRouter>
   );

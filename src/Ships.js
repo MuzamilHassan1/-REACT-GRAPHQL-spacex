@@ -13,7 +13,6 @@ const Ships = ({data}) => {
         </Card>
       </Col>
     </Row>
-
   )
 }
 
