@@ -40,3 +40,18 @@ body{
 .custom:hover{
   text-decoration: underline;
 }
+
+.info {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.suggestion{
+  cursor:pointer;
+  color:white;
+  background-color: #676868 !important;
+}
+
+.suggestion:hover{
+  color:#05d1ff;
+}

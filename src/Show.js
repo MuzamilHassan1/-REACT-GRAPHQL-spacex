@@ -15,8 +15,6 @@ const Show = () => {
               <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>{details}</Card.Text>
-
-
               </Card.Body>
               <Card.Footer className="text-muted">Launch Date: {date.substring(0,10)}</Card.Footer>
             </Card>

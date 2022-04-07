@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Navigation />
+      <Navigation launches={launches}/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/missions" element={
