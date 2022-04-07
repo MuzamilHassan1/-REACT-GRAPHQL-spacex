@@ -24,12 +24,12 @@ const Show = () => {
         </Row>
 
         <div>
-          {ships.length > 0 ? ships.map(s => (<Ships/>)) : <h1>No Ships Data Found for This Mission</h1>}
+          {ships.length > 0 ? ships.map(s => (<Ships data={s}/>)) : <h3 className="text-center">No Ships Data Found for This Mission</h3>}
         </div>
 
         <div className="center-button">
           <Link to="/missions">
-              <Button variant="primary">Return to Mission Listing</Button>
+              <Button variant="primary" className="mb-4">Return to Mission Listing</Button>
           </Link>
         </div>
     </>
